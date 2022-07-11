@@ -1,0 +1,177 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat center center fixed;
+    }
+    
+    .main {
+        width: 375px;
+        margin: 0 auto;
+        margin-top: 28%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 20px 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 50px 20px rgba(67, 67, 68, 0.3);
+    }
+    
+    h1 {
+        font-weight: 700px;
+        text-align: center;
+        /* margin-top: 120px; */
+    }
+    
+    .texta {
+        position: relative;
+        z-index: 2;
+        width: 375px;
+        height: 120px;
+        background-image: url(/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        transform: scale(1.0);
+    }
+    
+    .textb {
+        position: absolute;
+        z-index: 2;
+        top: 50px;
+        width: 375px;
+        height: 120px;
+        background-image: url(/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top -120% center;
+        transform: scale(1.5);
+    }
+    
+    @media (max-width: 1280) {
+        .textc {
+            display: none;
+        }
+    }
+    
+    .info {
+        padding: 0 5px;
+        width: 350px;
+        margin-bottom: 30px;
+    }
+    
+    details {
+        border-bottom: 1.5px solid hsl(240, 5%, 91%);
+        padding: 10px;
+        position: relative;
+    }
+    
+    details[open] {
+        padding: 15px 15px 0 10px;
+    }
+    
+    summary {
+        font-weight: 400;
+        color: hsl(237, 12%, 33%);
+        list-style: none;
+    }
+    
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    summary::after {
+        content: url(/icon-arrow-down.svg);
+        position: absolute;
+        right: 3%;
+    }
+    
+    details[open] summary {
+        font-weight: 700;
+        color: hsl(238, 29%, 16%);
+    }
+    
+    details[open] summary::after {
+        transform: rotate(180deg);
+    }
+    
+    p {
+        width: auto;
+        font-size: 12px;
+        font-weight: 400px;
+        padding: 5px;
+        color: hsl(240, 6%, 50%);
+    }
+    
+    .attribution {
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        margin: 2rem 2rem 1.8rem;
+    }
+    
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+    
+    @media (min-width: 1280px) {
+        .main {
+            margin-top: 5%;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow: 0 10px 50px rgba(67, 67, 68, 0.4);
+            width: max-content;
+            padding: 0;
+            border-radius: 20px;
+            position: relative;
+        }
+        summary:hover {
+            color: hsl(14, 88%, 65%);
+            cursor: pointer;
+        }
+        .bg {
+            width: 450px;
+            height: 400px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .texta {
+            background-image: url(/bg-pattern-desktop.svg);
+            width: 996px;
+            height: 945px;
+            position: absolute;
+            z-index: 1;
+            top: -330px;
+            left: -530px;
+            clip-path: inset(290px 0 0 530px);
+            transform: scale(0.8);
+        }
+        .textb {
+            background-image: url(/illustration-woman-online-desktop.svg);
+            position: relative;
+            z-index: 2;
+            top: 10px;
+            left: -60px;
+            width: 472px;
+            height: 359px;
+            transform: scale(0.9);
+            /* display: none; */
+        }
+        .textc {
+            background-image: url(/illustration-box-desktop.svg);
+            position: absolute;
+            z-index: 3;
+            width: 191px;
+            height: 184px;
+            top: 140px;
+            left: -100px;
+            transform: scale(0.9);
+        }
+        .texts {
+            margin: 30px 50px 30px 0;
+        }
+        h1 {
+            text-align: left;
+        }
+    }
