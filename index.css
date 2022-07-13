@@ -41,13 +41,13 @@
     .textb {
         position: absolute;
         z-index: 2;
-        top: 50px;
+        top: 10px;
         width: 375px;
-        height: 120px;
+        height: 180px;
         background-image: url(/illustration-woman-online-mobile.svg);
         background-repeat: no-repeat;
         background-position: top -120% center;
-        transform: scale(1.5);
+        transform: scale(1.0);
     }
     
     @media (max-width: 1280) {
